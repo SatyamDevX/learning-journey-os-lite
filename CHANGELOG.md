@@ -30,6 +30,20 @@ This project follows a simple learning-first changelog format. Use dates and com
 
 ### Added
 
+- Added architecture decisions for MVP asset typing, normalized tags, simple SQLite-backed search, and timeline events connected to assets.
+
+### Changed
+
+- Clarified the intended data architecture before generating application code.
+
+### Learned
+
+- Explicit architecture decisions help protect the MVP from premature table splitting, external search systems, and AI-driven scope creep.
+
+## 2026-06-01
+
+### Added
+
 - Created documentation set for Learning Journey OS Lite.
 - Added project overview, roadmap, agent instructions, coding standards, architecture decisions, tasks, changelog, learning log, and prompt archive.
 - Established Version 1 as a Flask + SQLite personal learning system.

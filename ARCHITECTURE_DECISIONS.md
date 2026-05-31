@@ -128,3 +128,71 @@ Use Markdown files for project documentation, planning, changelog, prompts, and 
 ### Consequences
 
 Documentation stays version-controlled, readable on GitHub, and easy to update with every feature.
+
+## ADR-007: Use A Simple Asset Type Field For Version 1
+
+- Date: 2026-06-01
+- Status: Accepted
+
+### Context
+
+Assets can represent notes, courses, projects, certificates, links, notebooks, documentation resources, and coding platform profiles. It would be possible to create separate tables for each asset type, but Version 1 needs a small and searchable system first.
+
+### Decision
+
+Use one central `Asset` concept with a simple type field for Version 1. Do not create separate type-specific tables until repeated real behavior requires them.
+
+### Consequences
+
+The MVP remains easier to build, search, test, and explain. Some type-specific fields may need to remain optional or generic at first, but that is acceptable for a personal archive.
+
+## ADR-008: Use Normalized Tags
+
+- Date: 2026-06-01
+- Status: Accepted
+
+### Context
+
+Tags are central to search and retrieval. Storing tags as comma-separated text would be quick, but it would make filtering, reuse, cleanup, and future search behavior harder.
+
+### Decision
+
+Represent tags as reusable records connected to assets through a many-to-many relationship.
+
+### Consequences
+
+Tag search and filtering stay reliable. The data model is slightly more complex than a text field, but the complexity supports a core project requirement.
+
+## ADR-009: Start With Simple Database Search
+
+- Date: 2026-06-01
+- Status: Accepted
+
+### Context
+
+Search is one of the most important MVP features. The project must search asset titles, descriptions, and tags, but Version 1 should not introduce AI search, embeddings, vector databases, or external search infrastructure.
+
+### Decision
+
+Start with simple SQLite-backed search over titles, descriptions, and tags. Consider SQLite FTS only if basic search becomes too limited.
+
+### Consequences
+
+The first search implementation stays understandable and aligned with the stack. Advanced search can be added later without changing the product mission.
+
+## ADR-010: Keep Timeline Events Connected To Assets
+
+- Date: 2026-06-01
+- Status: Accepted
+
+### Context
+
+The timeline should show chronological learning history. Some timeline entries will naturally come from assets, while others may represent broader learning milestones.
+
+### Decision
+
+Represent timeline events separately from assets, with an optional connection back to an asset.
+
+### Consequences
+
+Assets can appear on the timeline without forcing every learning event to be a full asset. This keeps the timeline flexible while preserving the asset-first architecture.

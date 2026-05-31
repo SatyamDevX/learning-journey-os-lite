@@ -10,7 +10,9 @@ Tasks are organized by project phase. Keep this file current as work is complete
 - [x] Define Git workflow and commit convention
 - [x] Generate project documentation files
 - [x] Review generated documentation for consistency
-- [ ] Commit documentation foundation
+- [x] Commit documentation foundation
+- [x] Review MVP architecture
+- [x] Document architecture decisions for asset typing, tags, search, and timeline events
 
 ## Project Setup
 

@@ -30,6 +30,31 @@ The project is both software and a learning artifact. Every meaningful feature s
 - What should be explored next?
 ```
 
+## 2026-06-01: Architecture Review
+
+### Built
+
+- Reviewed the MVP architecture against the source of truth.
+- Added architecture decisions for asset typing, tags, search, and timeline events.
+
+### Learned
+
+- A single asset-centered model is the simplest starting point for notes, projects, certificates, courses, links, and notebooks.
+- Tags deserve normalization because they are central to search and organization.
+- Search can begin with SQLite-backed matching before considering more advanced options.
+
+### Challenge
+
+- The project needs to remain future-friendly without introducing future-level complexity too early.
+
+### Resolution
+
+- The architecture now explicitly defers type-specific tables, AI search, vector databases, and external search infrastructure.
+
+### Next Question
+
+- Which asset fields are truly required on day one, and which should remain optional?
+
 ## 2026-06-01: Documentation Foundation
 
 ### Built
