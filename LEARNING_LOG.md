@@ -30,6 +30,32 @@ The project is both software and a learning artifact. Every meaningful feature s
 - What should be explored next?
 ```
 
+## 2026-06-01: Flask Foundation
+
+### Built
+
+- Added the Flask application factory.
+- Added environment-specific configuration classes.
+- Added blueprint placeholders and registration structure without route handlers.
+- Connected SQLAlchemy and Flask-Migrate to the app factory.
+
+### Learned
+
+- The application factory pattern is a clean foundation for testing and future feature registration.
+- Blueprint modules can define structure before routes exist, which keeps Sprint 2 focused on foundation work.
+
+### Challenge
+
+- The feature needed blueprint structure without accidentally implementing routes, templates, CRUD, or UI.
+
+### Resolution
+
+- Created blueprint objects only and registered them through the factory.
+
+### Next Question
+
+- What is the smallest smoke test that proves the app factory and extensions initialize correctly?
+
 ## 2026-06-01: Asset Model Foundation
 
 ### Built
