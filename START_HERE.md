@@ -422,6 +422,135 @@ Wait for approval if requirements are unclear.
 
 ---
 
+
+# Code Documentation Philosophy
+
+Code should be self-documenting whenever possible.
+
+Use descriptive names.
+
+Good:
+
+get_asset_by_id()
+
+Bad:
+
+ga()
+
+---
+
+Every public function should have a docstring.
+
+Example:
+
+"""
+Create a learning asset and generate
+a corresponding timeline event.
+"""
+
+---
+
+Comments should explain:
+
+- Why something exists
+- Business logic
+- Architectural decisions
+- Future extension points
+
+Comments should NOT explain obvious code.
+
+Bad:
+
+# Increment counter
+counter += 1
+
+Good:
+
+# Timeline events are stored separately to support
+# future AI-generated learning summaries.
+
+# GitHub Workflow
+
+Never commit directly to main.
+
+Development Flow:
+
+main
+← stable releases
+
+develop
+← integration branch
+
+feature/*
+← active work
+
+---
+
+Feature Development Process
+
+1. Create feature branch
+2. Implement feature
+3. Update documentation
+4. Commit changes
+5. Push branch
+6. Merge into develop
+
+---
+
+Every feature should update:
+
+- TASKS.md
+- CHANGELOG.md
+- LEARNING_LOG.md
+
+# Learning First Development
+
+This project is not only software.
+
+It is also a learning artifact.
+
+Future me should understand:
+
+- What was built
+- Why it was built
+- What was learned
+- What challenges occurred
+- How challenges were solved
+
+Every major feature should be documented.
+
+The repository should become:
+
+- Portfolio
+- Documentation
+- Learning Archive
+- Engineering Journal
+
+at the same time.
+
+intead of 
+feat:
+fix:
+docs:
+
+add examples 
+
+feat: implement asset creation page
+
+feat: add search functionality
+
+fix: resolve asset filtering issue
+
+docs: update roadmap for sprint 2
+
+refactor: move asset logic into service layer
+
+test: add asset model tests
+
+chore: configure flask migration setup
+
+
+
 # Final Rule
 
 When choosing between:
@@ -435,3 +564,5 @@ A simple maintainable solution
 Choose the simple solution.
 
 The purpose of this project is to solve knowledge fragmentation and preserve learning history.
+
+
