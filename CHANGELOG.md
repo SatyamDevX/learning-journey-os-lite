@@ -30,6 +30,22 @@ This project follows a simple learning-first changelog format. Use dates and com
 
 ### Added
 
+- Added the first SQLAlchemy 2.x model layer for assets, tags, asset-tag associations, and timeline events.
+- Added shared database extension setup for typed Flask-SQLAlchemy models.
+- Added project dependency list and Git ignore rules for local virtual environments and generated Python files.
+
+### Changed
+
+- Moved the project from documentation-only foundation into initial model implementation while keeping routes, forms, templates, and UI out of scope.
+
+### Learned
+
+- SQLAlchemy 2.x typed models make relationships and nullable fields explicit, which supports the project goal of readable learning-first code.
+
+## 2026-06-01
+
+### Added
+
 - Added architecture decisions for MVP asset typing, normalized tags, simple SQLite-backed search, and timeline events connected to assets.
 
 ### Changed

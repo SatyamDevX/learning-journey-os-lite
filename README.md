@@ -34,6 +34,29 @@ Version 1 does not include RAG, embeddings, LangGraph, Google ADK, ChromaDB, Pos
 - Documentation: Markdown
 - Version control: Git and GitHub
 
+## Local Setup
+
+Create and activate the virtual environment:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Migration commands, after the Flask app entry point is configured:
+
+```powershell
+flask db init
+flask db migrate -m "create asset, tag, and timeline models"
+flask db upgrade
+```
+
 ## Project Principles
 
 - Everything is an asset.

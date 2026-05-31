@@ -30,6 +30,31 @@ The project is both software and a learning artifact. Every meaningful feature s
 - What should be explored next?
 ```
 
+## 2026-06-01: Asset Model Foundation
+
+### Built
+
+- Created the core model layer for assets, tags, asset-tag relationships, and timeline events.
+- Set up a local virtual environment and installed the required Flask, SQLAlchemy, migration, and testing packages.
+
+### Learned
+
+- The asset-first architecture maps cleanly to one central `Asset` model plus normalized tags.
+- Timeline events should remain separate from assets so learning milestones can exist with or without a direct asset link.
+- SQLAlchemy 2.x `Mapped` annotations make model intent easier to inspect before routes exist.
+
+### Challenge
+
+- The project needed enough setup to define models correctly without drifting into routes, forms, templates, or UI.
+
+### Resolution
+
+- Added only the database extension and model files needed for the model layer.
+
+### Next Question
+
+- What validation rules should the asset creation flow enforce before saving user-entered assets?
+
 ## 2026-06-01: Architecture Review
 
 ### Built

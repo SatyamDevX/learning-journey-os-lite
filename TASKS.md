@@ -17,20 +17,20 @@ Tasks are organized by project phase. Keep this file current as work is complete
 ## Project Setup
 
 - [ ] Confirm Flask application structure
-- [ ] Configure virtual environment instructions
-- [ ] Add dependency management file
+- [x] Configure virtual environment instructions
+- [x] Add dependency management file
 - [ ] Configure Flask app entry point
 - [ ] Configure SQLite database location
-- [ ] Configure SQLAlchemy
-- [ ] Configure Flask-Migrate
+- [x] Configure SQLAlchemy
+- [x] Configure Flask-Migrate
 - [ ] Configure Pytest
 - [ ] Add basic smoke test
-- [ ] Update `CHANGELOG.md`
-- [ ] Update `LEARNING_LOG.md`
+- [x] Update `CHANGELOG.md`
+- [x] Update `LEARNING_LOG.md`
 
 ## Asset System
 
-- [ ] Design asset model
+- [x] Design asset model
 - [ ] Add asset migration
 - [ ] Implement asset list page
 - [ ] Implement asset detail page
