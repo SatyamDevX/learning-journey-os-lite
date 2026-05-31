@@ -1,0 +1,65 @@
+# Changelog
+
+All meaningful project changes should be recorded here.
+
+This project follows a simple learning-first changelog format. Use dates and commit-style categories.
+
+## Format
+
+```markdown
+## YYYY-MM-DD
+
+### Added
+
+- New behavior, docs, or features.
+
+### Changed
+
+- Updates to existing behavior or documentation.
+
+### Fixed
+
+- Bug fixes.
+
+### Learned
+
+- Short note linking product progress to learning progress.
+```
+
+## 2026-06-01
+
+### Added
+
+- Created documentation set for Learning Journey OS Lite.
+- Added project overview, roadmap, agent instructions, coding standards, architecture decisions, tasks, changelog, learning log, and prompt archive.
+- Established Version 1 as a Flask + SQLite personal learning system.
+
+### Changed
+
+- Expanded `README.md` from a placeholder into a project orientation document.
+
+### Learned
+
+- Clear documentation before application code helps protect scope and supports learning-first development.
+
+## 2026-06-01
+
+### Added
+
+- Defined project vision and constraints in `START_HERE.md`.
+- Documented the project mission, MVP features, non-goals, architecture principles, Git workflow, commit convention, documentation discipline, and code commenting philosophy.
+
+### Learned
+
+- The project should solve knowledge fragmentation first and defer advanced AI ideas until the core archive is useful.
+
+## 2026-05-31
+
+### Added
+
+- Initialized repository structure.
+- Created initial project folders for app, data, docs, instance, and tests.
+
+### Learned
+
+- A clear folder structure makes the project easier to grow without adding application complexity too early.
