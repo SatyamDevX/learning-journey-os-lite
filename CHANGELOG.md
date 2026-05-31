@@ -30,6 +30,23 @@ This project follows a simple learning-first changelog format. Use dates and com
 
 ### Added
 
+- Added Flask-Migrate migration directory and initial schema migration.
+- Added `wsgi.py` so the Flask CLI can discover the application.
+- Added initial SQLite migration workflow verification.
+
+### Changed
+
+- Updated README migration instructions with initialization, migration, upgrade, and verification commands.
+- Updated the application factory to ensure the instance directory exists before SQLite database creation.
+
+### Learned
+
+- A committed migration directory makes database setup repeatable while keeping the generated local SQLite database out of version control.
+
+## 2026-06-01
+
+### Added
+
 - Added Flask application factory setup.
 - Added configuration classes for development, testing, and production.
 - Added blueprint registration structure for dashboard, assets, search, links, timeline, and notes.
