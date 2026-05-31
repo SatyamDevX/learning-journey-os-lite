@@ -30,6 +30,23 @@ This project follows a simple learning-first changelog format. Use dates and com
 
 ### Added
 
+- Added Flask application factory setup.
+- Added configuration classes for development, testing, and production.
+- Added blueprint registration structure for dashboard, assets, search, links, timeline, and notes.
+- Connected Flask-SQLAlchemy and Flask-Migrate initialization to the application factory.
+
+### Changed
+
+- Updated setup documentation with the Flask app entry point for migration commands.
+
+### Learned
+
+- The application factory pattern keeps the project testable and modular while preserving the MVP boundary.
+
+## 2026-06-01
+
+### Added
+
 - Added the first SQLAlchemy 2.x model layer for assets, tags, asset-tag associations, and timeline events.
 - Added shared database extension setup for typed Flask-SQLAlchemy models.
 - Added project dependency list and Git ignore rules for local virtual environments and generated Python files.

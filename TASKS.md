@@ -16,11 +16,11 @@ Tasks are organized by project phase. Keep this file current as work is complete
 
 ## Project Setup
 
-- [ ] Confirm Flask application structure
+- [x] Confirm Flask application structure
 - [x] Configure virtual environment instructions
 - [x] Add dependency management file
-- [ ] Configure Flask app entry point
-- [ ] Configure SQLite database location
+- [x] Configure Flask app entry point
+- [x] Configure SQLite database location
 - [x] Configure SQLAlchemy
 - [x] Configure Flask-Migrate
 - [ ] Configure Pytest

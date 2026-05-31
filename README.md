@@ -49,7 +49,13 @@ Install dependencies:
 python -m pip install -r requirements.txt
 ```
 
-Migration commands, after the Flask app entry point is configured:
+Set the Flask app entry point:
+
+```powershell
+$env:FLASK_APP = "app:create_app"
+```
+
+Migration commands:
 
 ```powershell
 flask db init
