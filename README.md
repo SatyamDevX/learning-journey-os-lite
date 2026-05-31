@@ -49,19 +49,43 @@ Install dependencies:
 python -m pip install -r requirements.txt
 ```
 
-Set the Flask app entry point:
+The Flask CLI discovers the application through `wsgi.py`. If you prefer an explicit app target, set:
 
 ```powershell
-$env:FLASK_APP = "app:create_app"
+$env:FLASK_APP = "wsgi:app"
 ```
 
-Migration commands:
+Initialize migrations for a new checkout only if the `migrations/` directory does not exist:
 
 ```powershell
 flask db init
-flask db migrate -m "create asset, tag, and timeline models"
+```
+
+Create a migration after model changes:
+
+```powershell
+flask db migrate -m "initial schema"
+```
+
+Apply migrations to the local SQLite database:
+
+```powershell
 flask db upgrade
 ```
+
+Verify migration state:
+
+```powershell
+flask db current
+flask routes
+```
+
+Expected MVP tables after upgrade:
+
+- `assets`
+- `tags`
+- `asset_tags`
+- `timeline_events`
 
 ## Project Principles
 
@@ -115,4 +139,4 @@ The repository should document both the product and the learning journey behind 
 
 ## Current Status
 
-The repository is in early documentation and setup stage on the `develop` branch. The next work should remain MVP-focused and should not introduce application code until the project documentation is settled.
+The repository has documentation, architecture decisions, the asset model layer, Flask application foundation, and initial migration setup. The next work should remain MVP-focused and avoid routes, templates, CRUD, and UI until their sprint begins.

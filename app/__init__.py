@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from importlib import import_module
+from pathlib import Path
 
 from flask import Flask
 
@@ -16,6 +17,7 @@ def create_app(config_name: str | None = None) -> Flask:
     app = Flask(__name__, instance_relative_config=True)
     config_class = config_by_name.get(config_name or "development", DevelopmentConfig)
     app.config.from_object(config_class)
+    Path(app.instance_path).mkdir(parents=True, exist_ok=True)
 
     register_extensions(app)
     register_blueprints(app)

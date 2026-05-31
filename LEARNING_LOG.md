@@ -30,6 +30,32 @@ The project is both software and a learning artifact. Every meaningful feature s
 - What should be explored next?
 ```
 
+## 2026-06-01: Database Migration Setup
+
+### Built
+
+- Initialized Flask-Migrate.
+- Generated the initial schema migration for assets, tags, asset-tag associations, and timeline events.
+- Applied the migration to the local SQLite database.
+- Added a Flask CLI entry point through `wsgi.py`.
+
+### Learned
+
+- Flask-Migrate can discover SQLAlchemy metadata when the application factory imports model modules during extension setup.
+- Keeping the SQLite database file ignored while committing migration scripts gives repeatable setup without storing local data.
+
+### Challenge
+
+- Migration commands need a discoverable Flask application before Alembic can inspect model metadata.
+
+### Resolution
+
+- Added `wsgi.py` and verified `flask db init`, `flask db migrate`, `flask db upgrade`, and `flask db current`.
+
+### Next Question
+
+- What small smoke tests should prove the app factory and migration-backed database setup keep working?
+
 ## 2026-06-01: Flask Foundation
 
 ### Built

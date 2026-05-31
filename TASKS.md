@@ -31,7 +31,7 @@ Tasks are organized by project phase. Keep this file current as work is complete
 ## Asset System
 
 - [x] Design asset model
-- [ ] Add asset migration
+- [x] Add asset migration
 - [ ] Implement asset list page
 - [ ] Implement asset detail page
 - [ ] Implement asset creation page
